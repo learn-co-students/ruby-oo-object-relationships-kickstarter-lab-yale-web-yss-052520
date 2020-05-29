@@ -17,7 +17,7 @@ def find_backer
 end 
 
 def backers 
-   self.find_backer.map {|project_backer| project_backer.backer }
+   self.find_backer.collect {|project_backer| project_backer.backer }
 end 
 
 

@@ -17,7 +17,7 @@ class Backer
     end 
 
     def backed_projects
-        self.find_project.map { |project_backer| project_backer.project }
+        self.find_project.collect { |project_backer| project_backer.project }
     end
 
 
