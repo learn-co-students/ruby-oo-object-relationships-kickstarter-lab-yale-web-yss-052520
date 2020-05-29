@@ -6,6 +6,7 @@ class Project
         @title = title 
     end 
 
+    # When you add a backer to a project, you are creating an entirely new instance of ProjectBacker. This joiner class functions to maintain a single source of truth. You don't want Project to hold an array of Backers and each Backer to hold an array of Projects. 
     def add_backer(backer)
         ProjectBacker.new(self, backer)
     end 
